@@ -7,6 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Autores
+
+- **Nelson Alexis Cáceres Carreño 2171763**
+- **Jenny Marcela Santamaría Rincón 2171455**
+
 ## Descripción de la aplicación
 
 Esta aplicación es un simple crud de notas o recordatorios creado con:
