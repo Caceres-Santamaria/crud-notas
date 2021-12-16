@@ -62,7 +62,7 @@ Para instalar las extensiones necesarias si está en linux, puede ejecutar el si
 Para la gestión de dependencias de PHP se debe tener composer instalado, para instalarlo en Ubuntu debe tener instalado ya PHP, para tener una guía puede entrar [aquí](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04-es) o puede ejecutar los siguientes comandos:
 - **sudo apt update**
 - **sudo apt install php-cli unzip**
-- **cd ~**
+- cd ~
 - **curl -sS https://getcomposer.org/installer -o composer-setup.php**
 - **HASH=`curl -sS https://composer.github.io/installer.sig`**
 - **php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"**
