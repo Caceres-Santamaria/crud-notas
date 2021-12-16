@@ -15,7 +15,7 @@ Esta aplicación es un simple crud de notas o recordatorios creado con:
 - [alpineJS](https://alpinejs.dev/)
 - [tailwindCss](https://tailwindcss.com/)
 
-Además hace uso de dos bases de datos las cuales están contenerizadas con Docker, Mysql para la persistencia de las notas y Redis para contar el número de visitas que recibe la aplicación web
+Además hace uso de dos bases de datos las cuales están contenerizadas con Docker. Mysql para la persistencia de las notas y Redis para contar el número de visitas que recibe la aplicación web
 
 ## Creación de los contenedores con Docker
 
@@ -73,11 +73,31 @@ Para la gestión de dependencias de PHP se debe tener composer instalado, para i
 
 Una vez ya teniendo PHP8, sus extensiones necesarias, Composer y los contenedores creados, se deben seguir los siguientes pasos:
 
-- Clonar este repositorio con el siguiente comando: **git clone https://github.com/Caceres-Santamaria/crud-notas.git**
-- entrar al proyecto y una vez allí ejecutar el siguiente comando: **composer install**
-- ejecutar las migraciones de Laravel para crear las tablas necesarias en la base de datos con el siguiente comando: **php artisan migrate --seed**. Este comando además de crear las tablas, ingresa unos datos de prueba, si el contenedor quedó bien creado, no tendría por qué haber problema para conectarse a la base de datos.
-- Ejecutar el servidor web mediante el siguiente comando: **php artisan serve**
+- Clonar este repositorio con el siguiente comando:
+    - **git clone https://github.com/Caceres-Santamaria/crud-notas.git**
+- entrar al proyecto y una vez allí ejecutar el siguiente comando: 
+    - **composer install**
+- ejecutar las migraciones de Laravel para crear las tablas necesarias en la base de datos e ingresar unos datos de prueba, si el contenedor quedó bien creado, no tendría por qué haber problema para conectarse a la base de datos con el siguiente comando:
+    - **php artisan migrate --seed**.
+- Ejecutar el servidor web mediante el siguiente comando:
+    - **php artisan serve**
+- Entrar a la URL **http://127.0.0.1:8000** desde su navegador preferido, la plicación sólo responde a la ruta raíz, ya que es la única ruta creada y en donde se encuentra el Crud
 
+Una  vez ejecutado todos los anteriores pasos, si todo estuvo bien podría ver la aplicación corriendo en su navegador, en la parte superior derecha se puede ver un contador de visitas que se obtiene mediante redis y este se incrementa cada vez que se solicita la ruta raíz, entonces si desea ver incrementarse, basta con recargar la página y el contador, debería aumentar, si desea obtener esta variable entrando al contenedor de Redis debe ejecutar los siguientes pasos desde su CLI:
+
+- **docker exec -it redis-notas bash**
+- **redis-cli**
+- **get notas_visitas**
+
+## Características de la aplicación
+
+La aplicación brinda las siguientes características:
+- Buscar las notas por el título
+- Agregar una nota
+- Ver las notas creadas
+- Editar las notas
+- Eliminar las notas
+- Contar el número de visitas que ha tenido la aplicación
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
