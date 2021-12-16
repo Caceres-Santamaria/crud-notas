@@ -46,28 +46,28 @@ Creación del contenedor de Redis 6.2
 ## Instalación de PHP 8 en en Ubuntu 20.04 | 18.04
 
 Para instalar este lenguaje en linux puede consultar [aquí](https://ubunlog.com/php-8-0-instalar-lenguaje-en-ubuntu/) para tener una mejor guía, de lo contrario ejecute los siguientes comandos en la terminal:
-- sudo apt update; sudo apt upgrade
-- sudo apt install ca-certificates apt-transport-https software-properties-common
-- sudo add-apt-repository ppa:ondrej/php
-- sudo apt install php8.0
-- php -v
+- **sudo apt update; sudo apt upgrade**
+- **sudo apt install ca-certificates apt-transport-https software-properties-common**
+- **sudo add-apt-repository ppa:ondrej/php**
+- **sudo apt install php8.0**
+- **php -v**
 
 ## Instlatación de las extensiones de php 8 necesarias para ejecutar Laravel
 
 Para instalar las extensiones necesarias si está en linux, puede ejecutar el siguiente comando:
-- sudo apt install php8.0-BCMath php8.0-Ctype php8.0-Fileinfo php8.0-JSON php8.0-Mbstring php8.0-PDO php8.0-Tokenizer php8.0-XML php8.0-mysql
+- **sudo apt install php8.0-BCMath php8.0-Ctype php8.0-Fileinfo php8.0-JSON php8.0-Mbstring php8.0-PDO php8.0-Tokenizer php8.0-XML php8.0-mysql**
 
 ## Instalación de Composer 
 
 Para la gestión de dependencias de PHP se debe tener composer instalado, para instalarlo en Ubuntu debe tener instalado ya PHP, para tener una guía puede entrar [aquí](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04-es) o puede ejecutar los siguientes comandos:
-- sudo apt update
-- sudo apt install php-cli unzip
-- cd ~
-- curl -sS https://getcomposer.org/installer -o composer-setup.php
-- HASH=`curl -sS https://composer.github.io/installer.sig`
-- php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-- sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-- composer --version
+- **sudo apt update**
+- **sudo apt install php-cli unzip**
+- **cd ~**
+- **curl -sS https://getcomposer.org/installer -o composer-setup.php**
+- **HASH=`curl -sS https://composer.github.io/installer.sig`**
+- **php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"**
+- **sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer**
+- **composer --version**
 
 ## Pasos para Correr la aplicación
 
