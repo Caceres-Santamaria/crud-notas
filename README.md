@@ -78,7 +78,7 @@ Una vez ya teniendo PHP8, sus extensiones necesarias, Composer y los contenedore
 - entrar al proyecto y una vez allí ejecutar el siguiente comando: 
     - **composer install**
 - ejecutar las migraciones de Laravel para crear las tablas necesarias en la base de datos e ingresar unos datos de prueba, si el contenedor quedó bien creado, no tendría por qué haber problema para conectarse a la base de datos con el siguiente comando:
-    - **php artisan migrate --seed**.
+    - **php artisan migrate --seed**
 - Ejecutar el servidor web mediante el siguiente comando:
     - **php artisan serve**
 - Entrar a la URL **http://127.0.0.1:8000** desde su navegador preferido, la plicación sólo responde a la ruta raíz, ya que es la única ruta creada y en donde se encuentra el Crud
